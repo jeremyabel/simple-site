@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>A Simple Site</title>
+        <meta name="viewport" content="user-scalable = no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua:300|Open+Sans:400,400i" rel="stylesheet">
+        <link href='index.css' rel='stylesheet'>
+    </head>
+
+    <body>
+
+        <!-- An example of a top bar with some links. If you want more or less than 4, check the 
+             "n-menu-items" variable at the top of the scss/sections/_menu.scss file -->
+        <div id="top-bar" class="bg-black" >
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+            <section>
+                <div class="full-span">
+                    <h1>Cool Blog Title</h1>
+                </div>
+            </section>
+
+            <section>
+                <!-- Creates a column that spans half the width of the grid, starting from the left -->
+                <div class="half-span">
+
+                    <!-- First paragraph -->
+                    <div class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue purus, pellentesque non arcu vitae, condimentum placerat ligula. Morbi quis egestas mi, non sagittis metus. Nam at tristique purus. Morbi sit amet pharetra felis. Sed fermentum congue odio, in fermentum velit sollicitudin eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi.</div>
+
+                    <!-- Second paragarph -->
+                    <div class="body-copy">Proin arcu quam, auctor eu egestas a, facilisis in lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam sed dignissim odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec varius sit amet libero sit amet aliquam. Nunc vel pharetra metus. Proin vitae nisl sit amet est suscipit blandit in eget augue. Suspendisse porttitor molestie sem eu mollis. Integer bibendum bibendum libero egestas ultricies. Pellentesque ultrices risus sit amet lacus tristique, non gravida tortor sagittis. Proin a tortor fringilla, convallis nibh eget, bibendum leo. Cras vel elit lobortis, scelerisque dui quis, laoreet nulla. Morbi interdum dui in placerat semper. Etiam vel velit odio. Nulla a neque eget mauris blandit facilisis. Vestibulum vel eros interdum ligula mollis porta.</div>
+                </div>
+
+                <!-- Creates another half-span column next to the previous one. -->
+                <div class="half-span">
+                    <img src="http://lorempixel.com/800/500/animals" />
+                </div>
+            </section>
+
+            <section>
+                <!-- Create a six-column-wide column that is centered on the page -->
+                <div class="six-span-center">
+
+                    <!-- An example of embedded video. The iframe tag is directly from youtube's embedded thing. All that 
+                    needs to be done here is to wrap it in a div with a class which takes care of the video's aspect ratio.
+                    The class is defined in scss/index.scss. You'll need to write a new class for any odd aspect ratios you 
+                    want to support. 16:9 and 4:3 are written already. -->
+                    <div class="video-wrapper-16x9">
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/Wtqk54vkd1k?rel=0&amp;showinfo=0?ecver=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="six-span-center">
+                    <div class="body-copy no-horiz-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue purus, pellentesque non arcu vitae, condimentum placerat ligula. Morbi quis egestas mi, non sagittis metus. Nam at tristique purus. Morbi sit amet pharetra felis. Sed fermentum congue odio, in fermentum velit sollicitudin eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi.</div>
+                </div>
+            </section>
+
+
+            <section id="thumbnails">
+                <div class="eight-span-center">
+
+                    <!-- The "half-span", "third-span", and "quarter-span" classes take up a half, third, and quarter
+                    respectively, of their parent containers. In this case, the parent container is an eight-span column. -->
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/300/200/animals" />
+                        <div class="caption-copy">A cute animal can go in this box</div>
+                    </div>
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/300/200/animals" />
+                        <div class="caption-copy">Hey here's another one</div>
+                    </div>
+                </div>
+
+                <div class="eight-span-center">
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/200/200/animals" />
+                        <div class="caption-copy">This one's square!</div>
+                    </div>
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/200/200/animals" />
+                        <div class="caption-copy">Wow, another square!</div>
+                    </div>
+                </div>
+
+                <div class="eight-span-center">
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/300/200/animals" />
+                        <div class="caption-copy">Dang I wonder what animal this will be</div>
+                    </div>
+                    <div class="half-span">
+                        <img src="http://lorempixel.com/300/200/animals" />
+                        <div class="caption-copy">And a final one</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </body>
+</html>

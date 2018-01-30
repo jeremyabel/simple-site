@@ -1,0 +1,18 @@
+{
+  "name": "simple-site",
+  "version": "0.0.1",
+  "main": "public/index.js",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "node-sass": "^3.13.1",
+    "nodemon": "^1.9.1"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets --include-path node_modules/bourbon-neat/app/assets/stylesheets --include-path scss scss/index.scss public/index.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.7.4"
+  }
+}

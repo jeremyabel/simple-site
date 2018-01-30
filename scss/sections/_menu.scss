@@ -1,0 +1,32 @@
+$n-menu-items: 4;
+$menu-padding: modular-scale(-1);
+$fade-speed: 0.5s;
+
+#top-bar {
+	background: #888;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			font-family: $serif-font-family;
+			font-size: modular-scale(0);
+			width: calc( ( 100% / #{$n-menu-items} ) - 5px );
+			padding: $menu-padding 0;
+			text-align: center;
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #00F;
+			}
+		}
+	}
+} 

@@ -1,0 +1,70 @@
+@import "reset";
+@import "bourbon";
+@import "neat";
+@import "grid-settings";
+@import "typography";
+@import "spans";
+@import "sections/menu";
+@import "sections/thumbnails";
+
+#content {
+	padding-top: modular-scale(8);
+}
+
+section {
+	@include outer-container;
+
+	margin-bottom: modular-scale(2);
+
+	&.full-width {
+		@include outer-container(100%);
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.hide-on-mobile {
+	@include media(max-width $mobile-width) {
+		display: none;
+	}
+}
+
+/* 
+CSS for wrapping a 16:9 video. Duplicate this and adjust the padding-bottom 
+value to match the aspect ratio. A 4:3 wrapper has been provided below as well.
+*/
+.video-wrapper-16x9 {
+	height: 0;
+
+	/* 56.25 = 9/16 aspect ratio */
+	padding-bottom: 56.25%;
+
+	position: relative;
+
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%
+	}
+}
+
+.video-wrapper-4x3 {
+	height: 0;
+
+	/* 56.25 = 3/4 aspect ratio */
+	padding-bottom: 75%;
+
+	position: relative;
+
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%
+	}
+}

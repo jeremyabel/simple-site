@@ -1,0 +1,82 @@
+@mixin fontSmooth() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$base-font-family: 'Open Sans', sans-serif;
+$serif-font-family: 'Inknut Antiqua', serif;
+
+$modular-scale-base: 17px;
+
+$base-font-size: modular-scale(0);
+$base-font-weight-light:    300;
+$base-font-weight-regular:  400;
+$base-font-weight-medium:   500;
+
+$body-copy-font-size: modular-scale(0);
+$body-copy-line-height: modular-scale(2);
+$header-font-size: modular-scale(2);
+
+html {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+a, a:active, a:visited {
+  color: inherit;
+}
+
+h1 {
+  font-family: $serif-font-family;
+  font-size: $header-font-size;
+  line-height: modular-scale(4);
+  text-align: center;
+  
+  @include fontSmooth;
+
+  @include media(max-width $mobile-width) {
+    line-height: modular-scale(5);
+  }
+}
+
+h2 {
+  font-family: $serif-font-family;
+  text-align: center;
+}
+
+h3 {
+  font-family: $serif-font-family;
+  text-align: center;
+}
+
+.body-copy {
+  font-size: $body-copy-font-size;
+  margin: 0 modular-scale(1) modular-scale(1);
+}
+
+.no-horiz-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bold {
+  font-weight: $base-font-weight-medium;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.absolute-center {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%)
+}
